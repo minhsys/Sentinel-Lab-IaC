@@ -3,7 +3,7 @@
 This repository is a starter blueprint to build a cloud-first SOC lab in Azure with Microsoft Sentinel as SIEM/SOAR/TIP. It uses Terraform for core infra, Bicep for Sentinel resources, PowerShell for runtime/configuration and sample data ingestion, and GitHub Actions for CI/CD.
 
 
-Sentinel-Lab-Iac/
+```Sentinel-Lab-Iac/
 ├── terraform/                  # Terraform files for core infrastructure
 │   ├── main.tf
 │   ├── variables.tf
@@ -29,6 +29,7 @@ Sentinel-Lab-Iac/
 │   ├── terraform/
 │   └── bicep/
 └── README.md
+```
 
 Use Git branches (e.g., main, dev, feature/*) for development and testing.
 Enable branch protection on main to require pull request reviews and passing CI/CD checks.
