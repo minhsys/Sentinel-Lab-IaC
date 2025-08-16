@@ -1,0 +1,2 @@
+# Placeholder for Bicep tests
+# Use az deployment group validate --resource-group <rg> --template-file ../bicep/main.bicep

@@ -1,0 +1,16 @@
+name: Deploy Bicep Content
+on:
+  push:
+    branches: [ main ]
+    paths: [ 'bicep/**' ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  bicep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - run: az deployment group create --resource-group ${{ vars.RESOURCE_GROUP_NAME }} --template-file bicep/main.bicep --parameters workspaceName=${{ vars.WORKSPACE_NAME }}

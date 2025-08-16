@@ -1,0 +1,3 @@
+# Placeholder for Terraform tests
+# Use Terratest: go test -v -timeout 30m
+# Example: Install Go, then run tests here. S 
