@@ -12,15 +12,15 @@ jobs:
   validate-and-deploy:
     runs-on: ubuntu-latest
     
-    # permissions:
-    #   id-token: write
-    #   contents: read
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Login to Azure
+      - name: Login to Azure (OIDC)
         uses: azure/login@v2
         with:
           #auth-type: 'SERVICE_PRINCIPAL'
