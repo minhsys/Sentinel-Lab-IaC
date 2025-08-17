@@ -4,6 +4,8 @@ resource logAnalytics 'Microsoft.OperationalInsights/workspaces@2021-12-01-previ
   name: workspaceName
 }
 
+// testing
+
 resource alertRule 'Microsoft.SecurityInsights/alertRules@2023-02-01' = {
   name: 'SampleTrainingRule'
   //scope: resourceGroup().id + '/providers/Microsoft.OperationalInsights/workspaces/${workspaceName}'
