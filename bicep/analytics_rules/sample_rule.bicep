@@ -1,8 +1,14 @@
 param workspaceName string
 
+resource logAnalytics 'Microsoft.OperationalInsights/workspaces@2021-12-01-preview' existing = {
+  name: workspaceName
+}
+
 resource alertRule 'Microsoft.SecurityInsights/alertRules@2023-02-01' = {
   name: 'SampleTrainingRule'
-  scope: resourceGroup().id + '/providers/Microsoft.OperationalInsights/workspaces/${workspaceName}'
+  //scope: resourceGroup().id + '/providers/Microsoft.OperationalInsights/workspaces/${workspaceName}'
+  scope: logAnalytics
+  kind: 'Scheduled'
   properties: {
     displayName: 'Sample Analytics Rule for Training'
     enabled: true
