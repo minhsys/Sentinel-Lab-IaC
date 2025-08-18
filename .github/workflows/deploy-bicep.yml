@@ -33,12 +33,12 @@ jobs:
         run: |
           az deployment group validate \
             --resource-group sentinel-lab-iac-rg \
-            --template-file main.bicep \
-            --parameters workspaceName=sentinel-lab-iac-workspace param2=value2  # Add your parameters here if needed
+            --template-file bicep/main.bicep \
+            --parameters workspaceName=sentinel-lab-iac-workspace   # Add your parameters here if needed
 
       - name: Deploy Bicep
         run: |
           az deployment group create \
             --resource-group sentinel-lab-iac-rg \
             --template-file main.bicep \
-            --parameters workspaceName=sentinel-lab-iac-workspace param2=value2  # Add your parameters here if needed
+            --parameters workspaceName=sentinel-lab-iac-workspace   # Add your parameters here if needed
