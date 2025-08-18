@@ -1,5 +1,5 @@
 //Parameters
-param resourceGroupName string //= resourceGroup().name
+param resourceGroupName string = resourceGroup().name
 param workspaceName string
 param location string = resourceGroup().location
 
