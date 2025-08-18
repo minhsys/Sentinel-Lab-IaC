@@ -2,7 +2,8 @@ param workbookName string
 param location string
 
 resource workbook 'Microsoft.Insights/workbooks@2021-08-01' = {
-  name: workbookName
+  //name: workbookName
+  name: guid(resourceGroup().id, 'traininglabworkbook')
   location: location
   kind: 'shared'
   properties: {

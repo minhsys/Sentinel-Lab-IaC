@@ -20,5 +20,7 @@ resource alertRule 'Microsoft.SecurityInsights/alertRules@2023-02-01' = {
     severity: 'Medium'
     triggerOperator: 'GreaterThan'
     triggerThreshold: 0
+    suppressionDuration: 'PT1H'
+    suppressionEnabled: false
   }
 }
