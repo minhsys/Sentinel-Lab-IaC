@@ -40,5 +40,5 @@ jobs:
         run: |
           az deployment group create \
             --resource-group sentinel-lab-iac-rg \
-            --template-file main.bicep \
+            --template-file bicep/main.bicep \
             --parameters workspaceName=sentinel-lab-iac-workspace   # Add your parameters here if needed
