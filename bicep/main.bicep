@@ -10,7 +10,7 @@ resource logAnalytics 'Microsoft.OperationalInsights/workspaces@2021-12-01-previ
 
 // test to trigger deployment 10 - correct analytics rules
 
-var solutionId = 'azuresentinel.azure-sentinel-solution-traininglab' // Derived from GitHub patterns; adjust if needed
+var solutionId = 'azuresentinel.azure-sentinel-solution-azuretraininglab' // Derived from GitHub patterns; adjust if needed
 var solutionVersion = '1.0.0' // Use latest version; check Content Hub for updates
 //var solutionSuffix = '${solutionId}-Solution-${solutionId}-${solutionVersion}'
 
